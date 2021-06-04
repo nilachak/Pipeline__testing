@@ -53,8 +53,8 @@ jobs:
         chmod 700 get_helm.sh
         ./get_helm.sh
         
-    - name: Deploy to GKE Cluster
-      run: |-
-        gcloud container clusters get-credentials ${{ secrets.CLUSTER_NAME }} --zone $CLUSTER_ZONE
-        # install/upgrade helm chart
-        helm upgrade --install testapp ./helm/testapp --set image.repository=gcr.io/$PROJECT_ID/$REPO_NAME --set image.tag=$GITHUB_SHA
+#     - name: Deploy to GKE Cluster
+#       run: |-
+#         gcloud container clusters get-credentials ${{ secrets.CLUSTER_NAME }} --zone $CLUSTER_ZONE
+#         # install/upgrade helm chart
+#         helm upgrade --install testapp ./helm/testapp --set image.repository=gcr.io/$PROJECT_ID/$REPO_NAME --set image.tag=$GITHUB_SHA
