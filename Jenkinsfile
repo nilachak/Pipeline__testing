@@ -55,14 +55,14 @@ pipeline{
               } 
            }   
          }
-       stage('Deploy to GKE Cluster'){
-           steps{
-              script{
-                 sh('gcloud container clusters get-credentials ${cluster_name} --zone ${cluster_zone} --project ${project_id}')
-                 sh('helm upgrade --install testapp ./helm/testapp --set image.repository=gcr.io/${project_id}/${repo_name} --set image.tag=$BUILD_NUMBER')
-              } 
-           }   
-         }         
+//        stage('Deploy to GKE Cluster'){
+//            steps{
+//               script{
+//                  sh('gcloud container clusters get-credentials ${cluster_name} --zone ${cluster_zone} --project ${project_id}')
+//                  sh('helm upgrade --install testapp ./helm/testapp --set image.repository=gcr.io/${project_id}/${repo_name} --set image.tag=$BUILD_NUMBER')
+//               } 
+//            }   
+//          }         
                                                            
   }
 }
