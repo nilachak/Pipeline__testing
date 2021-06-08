@@ -6,12 +6,6 @@ pipeline{
   }
   stages{
     stage('Installation'){
-      steps{
-          script{
-            sh 'npm init'
-          }
-          }
-      }
     stage('Build'){
       steps{
           sh 'npm run build'
