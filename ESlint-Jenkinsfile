@@ -1,0 +1,27 @@
+pipiline{
+  agent any
+  tools {nodejs "node js"}
+  stages{
+    stage('Installation'){
+      steps{
+        script{
+          sh 'npm install'
+        }
+      }
+    }
+    stage('Build'){
+      steps{
+        script{
+          sh 'npm run build'
+        }
+      }  
+    }
+    stage('ESlint'){
+      steps{
+        script{
+          sh 'npm run lint'
+        }
+      }  
+    }
+}
+}
