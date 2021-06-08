@@ -6,7 +6,7 @@ pipeline{
     project_id = credentials('project_id');
     repo_name = 'testapp';
   }
-  tools {nodejs}
+  tools {nodejs "node js"}
   stages{
     stage('Installation'){
       steps{
