@@ -5,17 +5,12 @@ pipeline{
       }
   }
   stages{
-      
+
     stage('cache clean'){
         steps{
             sh 'npm cache clean --force'
         }
-    }  
-    stage('install'){
-        steps{
-            sh 'npm install'
-        }
-    }  
+    }    
     stage('Build'){
       steps{
           sh 'npm run build'
@@ -24,6 +19,11 @@ pipeline{
     stage('Test'){
       steps{
           sh 'npm run coverage'
+      }  
+    }
+    stage('ESlint'){
+      steps{
+          sh 'npm run lint'
       }  
     }
 }
