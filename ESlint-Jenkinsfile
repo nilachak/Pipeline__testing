@@ -10,9 +10,9 @@ pipeline{
           sh 'npm run build'
       }  
     }
-    stage('ESlint'){
+    stage('Test'){
       steps{
-          echo "Third AKA Eslint step"
+          sh 'npm run coverage'
       }  
     }
 }
