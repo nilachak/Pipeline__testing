@@ -11,6 +11,7 @@
     "build": "echo \"Build Stage\"",
     "test": "jest test/**.test.js",
     "coverage": "jest test/**.test.js --coverage",
+    "lint": "eslint src --ext .js,.ts --max-warnings 0 -f json --output-file eslint_report.json",
     "postinstall": "husky install"
   },
   "jest": {
