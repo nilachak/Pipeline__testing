@@ -21,7 +21,7 @@
         "no-confusing-arrow": "off"
     },
     "parserOptions": {
-        "ecmaVersion": 2017
+        "ecmaVersion": 6
     }
 
 }
