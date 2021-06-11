@@ -33,8 +33,7 @@ pipeline{
                 sh 'ls -lrt nodejsscan'
                 sh 'python3 -m venv venv'
                 sh '. venv/bin/activate'
-                sh 'cd nodejsscan'
-                sh 'ls -lrt'
+                sh 'sh nodejsscan/run.sh'
               } 
            }   
          }                                                  
