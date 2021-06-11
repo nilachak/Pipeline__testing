@@ -29,7 +29,6 @@ pipeline{
         stage('Clone repo'){
            steps{
               script{
-                sh 'git clone https://github.com/ajinabraham/nodejsscan.git'
                 sh 'cd nodejsscan'
                 sh 'ls -lrt'
               } 
