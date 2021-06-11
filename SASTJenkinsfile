@@ -19,6 +19,12 @@ pipeline{
               } 
            }   
          }         
-                                                         
+        stage('ESlint'){
+           steps{
+              script{
+                sh 'npm run lint'
+              } 
+           }   
+         }                                                 
   }
 }
