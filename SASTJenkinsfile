@@ -25,6 +25,13 @@ pipeline{
                 sh 'npm run lint'
               } 
            }   
-         }                                                 
+         }
+        stage('SAST'){
+           steps{
+              script{
+                sh 'virtualenv venv -p python3'
+              } 
+           }   
+         }                                                  
   }
 }
