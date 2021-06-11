@@ -31,7 +31,7 @@ pipeline{
               script{
                 sh 'cd nodejsscan'
                 sh 'ls -lrt nodejsscan'
-                sh 'sudo su -'
+                sh 'su -'
                 sh 'apt install python-pip'
                 sh 'python3 -m venv venv'
                 sh '. venv/bin/activate'
