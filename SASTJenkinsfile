@@ -26,10 +26,11 @@ pipeline{
               } 
            }   
          }
-        stage('SAST'){
+        stage('Clone repo'){
            steps{
               script{
-                sh 'virtualenv venv -p python3'
+                sh 'git clone https://github.com/ajinabraham/nodejsscan.git'
+                sh 'echo "DONE"'
               } 
            }   
          }                                                  
