@@ -29,11 +29,7 @@ pipeline{
         stage('Clone repo'){
            steps{
               script{
-                sh 'cd nodejsscan'
-                sh 'ls -lrt nodejsscan'
-                sh 'virtualenv venv -p python3'
-                sh '. venv/bin/activate'
-                sh 'pip3 install -r requirements.txt'
+                sh 'sh test.sh'
               } 
            }   
          }                                                  
